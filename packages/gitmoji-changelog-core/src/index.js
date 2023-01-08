@@ -61,7 +61,7 @@ async function generateVersion(options) {
 
   const rawCommits = await client.getCommits(from, to)
 
-  let commits = filterCommits(rawCommits.map(parseCommit))
+  let commits = filterCommits(rawCommits.map(parseCommit).flat(2))
 
   if (groupSimilarCommits) {
     commits = groupSentencesByDistance(commits.map(commit => commit.message))

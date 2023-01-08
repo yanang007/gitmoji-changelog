@@ -98,4 +98,11 @@ module.exports = [
       'busts_in_silhouette',
     ],
   },
+  {
+    group: 'critical',
+    label: 'Critical',
+    emojis: [
+      'boom',
+    ],
+  },
 ]
